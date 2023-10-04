@@ -1,0 +1,42 @@
+form{
+    background-color: #09094f;
+    color: aliceblue;
+    font-family: monospace;
+    max-width: 80%;
+    margin: auto;
+}
+body{
+    background-color: azure;
+}
+input{
+    display: block;
+    margin: 2em 0;
+}
+input[type = "checkbox"] {
+    display: inline;
+}
+label{
+    display: block;
+}
+header{
+    background-color: aqua;
+}
+nav{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+ul > li{
+    text-decoration: none;
+    display: inline;
+    padding: 2em;
+}
+h1{
+    text-align: center;
+    font-family: "Agency FB";
+}
+img{
+    display: flex;
+    margin: auto;
+    align-items: center;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Collins Survey</title>
+</head>
+<body>
+    <header id="home">
+        <h1>Survey Form</h1>
+        <img src="Images/question.jpg" alt="Logo" width="200" height="200">
+        <nav>
+            <ul>
+                <li><a href="#home" > Home</a></li>
+                <li><a href="#about" > About</a></li>
+                <li><a href="#form" > Form</a></li>
+                <li><a href="#contact" > Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about"></section>
+    <form id="form">
+        <section class="personal">
+            <fieldset>
+                <legend>Personal Details</legend>
+                <label for="name">Name: </label><input type="text" placeholder="Enter Your name" id="name" required>
+                <label for="email">Email: </label><input type="email" placeholder="Enter your email" id="email" required>
+                <label for="phone">Phone Number: </label><input type="tel" placeholder="Enter your phone number" id="phone" required>
+            </fieldset>
+        </section>
+        <section>
+            <fieldset>
+                <legend>Survey Questions</legend>
+                <label for="service-rate">How would rate our service out of 5</label>
+                <select id="service-rate">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <label>What's your current stack</label>
+                <label><input type="checkbox"> Web Developer</label>
+                <label><input type="checkbox"> Frontend Developer</label>
+                <label><input type="checkbox"> Backend Developer</label>
+                <label><input type="checkbox"> Fullstack Developer</label>
+                <label><input type="checkbox"> Devops Engineer</label>
+                <label><input type="checkbox"> Data Engineer</label>
+                <label><input type="checkbox"> Data Scientist</label>
+                <label><input type="checkbox"> Data Analyst</label>
+                <input type="password">
+            </fieldset>
+        </section>
+        <section></section>
+        <section></section>
+        <button>SUBMIT</button>
+    </form>
+<footer id="contact"></footer>
+</body>
+</html>
