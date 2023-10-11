@@ -22,3 +22,6 @@ table {
   body{
     text-align: center;
   }
+  main{
+    background: linear-gradient(135deg, rgba(146, 230, 255, 0.2), rgba(186, 146, 255, 0.3));
+  }
