@@ -1,0 +1,24 @@
+table {
+    border-collapse: collapse;
+    width: 50%;
+    border-radius: 20px;
+    margin: auto;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:hover {
+    background-color: #bcc5c599;
+    border-top: #4e5858 solid 1px;
+    border-bottom: #4e5858 solid 1px;
+  }
+  thead tr{
+    background-color: seagreen;
+    border-radius: 20px;
+  }
+  body{
+    text-align: center;
+  }

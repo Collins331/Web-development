@@ -1,9 +1,11 @@
 form{
-    background-color: #09094f;
+    background-color: rgba(34, 67, 255, 80%);
     color: aliceblue;
     font-family: monospace;
     max-width: 80%;
-    margin: auto;
+    margin: 20px auto 20px auto;
+    padding: 20px;
+
 }
 body{
     background-color: azure;
@@ -34,9 +36,15 @@ ul > li{
 h1{
     text-align: center;
     font-family: "Agency FB";
+    font-size: 5rem;
 }
 img{
     display: flex;
     margin: auto;
     align-items: center;
+}
+table, tr, td, th{
+    border: darkblue 2px solid;
+    margin: 20px auto 20px auto;
+    border-collapse: collapse;
 }
