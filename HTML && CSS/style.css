@@ -1,0 +1,37 @@
+body{
+    background-color: aquamarine;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+form{
+    margin: auto;
+    width: 40%;
+    background-color: gold;
+    padding: 20px;
+    border: darkblue solid 2px;
+    border-radius: 20px;
+    align-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+}
+label, input{
+    display: block;
+    margin: 20px;
+}
+button{
+    background-color: deepskyblue;
+    font-size: 1.5em;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 10px;
+}
+button:hover{
+    background: aliceblue;
+    color: navy;
+}
+input{
+    margin-left: 0px;
+    border-radius: 5px;
+    font-size: 20px;
+}

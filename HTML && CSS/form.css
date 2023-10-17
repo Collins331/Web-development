@@ -1,0 +1,46 @@
+body{
+    background-color: rgba(43, 100, 147, 0.8);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 100px;
+}
+form{
+    margin: auto;
+    width: 30%;
+    padding: 30px;
+    background-color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*box-shadow: 10px;*/
+    box-shadow: 0px 5px 2px 0px #2b2b31;
+    /*box-shadow: -5px -5px 2px 0px #2b2b31;*/
+    border-radius: 10px;
+}
+h1{
+    text-align: center;
+}
+input, select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+fieldset{
+    padding: 70px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+}
+select{
+    background-color: rgba(105, 137, 0, 0.9);
+    color: rgba(248, 197, 6, 0.9);
+    font-family: Arial, sans-serif;
+}
+.btn-3d{
+    position: relative;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #4e5858;
+    cursor: pointer;
+    margin-left: 40%;
+    border-radius: 5px;
+}

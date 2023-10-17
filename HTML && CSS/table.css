@@ -1,0 +1,46 @@
+table{
+    border-collapse: collapse;
+    width: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    text-align: left;
+    border-radius: 10px;
+    margin: auto;
+    background-color: #EAFAF1;
+    border-bottom: #2B9375 2px solid;
+}
+body{
+    background: linear-gradient(135deg, rgba(146, 230, 255, 0.2), rgba(186, 146, 255, 0.3));
+}
+
+tbody tr:nth-child(even){
+    background-color: #d9dfdc99;
+    color: #2B9375;
+    border-top: #b0b9b5cc solid 2px;
+    border-bottom: #b0b9b5cc solid 2px;
+}
+h1{
+    text-align: center;
+    color: #000000;
+}
+td, th{
+    padding: 10px;
+}
+table th {
+    border: none;
+    background-color: #2B9375;
+    padding: 10px;
+    color: #d9dfdc;
+}
+table.std thead tr th:first-child {
+    /* padding-left: 0.25cm; To align with section title */
+    /* border-bottom: 0.03cm solid #8a8a8a; */
+    border-radius: 15px 0px 0px 0px;
+}
+table.std thead tr th:last-child{
+    /* border-bottom: 0.03cm solid #8a8a8a; */
+    border-radius: 0px 15px 0px 0px;
+}
+body{
+    font-size: 1.5em;
+}
