@@ -1,0 +1,32 @@
+body{
+    background-image: url("../images/solar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+label{
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: darkblue;
+}
+body a{
+    text-decoration: none;
+    font-size: 2em;
+}
+.head{
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, #86f633, #ffee2f);
+}
+.tab{
+    background-color: navy;
+    color: #f3e6e6;
+    border-radius: 10px;
+}
+body h1{
+    color: #0c17e5;
+    text-align: center;
+    font-size: 4rem;
+}
+.tbl tr{
+    background-color: rgba(23, 45, 45, 69%);
+}

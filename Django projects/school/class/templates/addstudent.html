@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <div class="container">
+        <h1 class="mt-5" >Add Student</h1>
+        <form action="" enctype="multipart/form-data" method="post" class="mt-5 px-5">
+
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
+            </div>
+            <label for="age" class="form-label">Age</label>
+            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" name="age">
+            <div class="mb-3">
+              <label for="image" class="form-label">Image</label>
+              <input class="form-control" type="file" id="image" accept="image/jpeg" name="image">
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary mt-5" type="Submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
