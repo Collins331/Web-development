@@ -3,7 +3,7 @@
 {% block body %}
 <div class="container">
     <table class="table mt-5 tbl">
-        <h1>Students</h1>
+        <h1>Students - Tabular</h1>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -11,17 +11,63 @@
           <th scope="col">Email</th>
           <th scope="col">Age</th>
           <th scope="col">Image</th>
+            <th scope=col">Edit</th>
+            <th scope=col">Delete</th>
         </tr>
       </thead>
       <tbody>
+      {% for dd in data %}
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>Image</td>
+          <th scope="row">{{ dd.id }}</th>
+          <td>{{ dd.name }}</td>
+          <td>{{ dd.email }}</td>
+          <td>{{ dd.age }}</td>
+          <td><img src="media/{{ dd.image }}" alt="{{ dd.name }}" width="100", height="100"></td>
+            <td>
+                <a class="btn btn-warning" href="/edit/{{ dd.id }}">Edit</a>
+            </td>
+            <td>
+                <a class="btn btn-danger" href="/delete/{{ dd.id }}">Delete</a>
+            </td>
+{#                <!-- Button trigger modal -->#}
+{#                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">#}
+{#                  Delete#}
+{#                </button>#}
+{##}
+{#                <!-- Modal -->#}
+{#                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">#}
+{#                  <div class="modal-dialog">#}
+{#                    <div class="modal-content">#}
+{#                      <div class="modal-header">#}
+{#                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete {{ del.name }}</h1>#}
+{#                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>#}
+{#                      </div>#}
+{#                      <div class="modal-body">#}
+{#                        Are you sure you want to delete {{ del.name }}#}
+{#                      </div>#}
+{#                      <div class="modal-footer">#}
+{#                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
         </tr>
+      {% endfor %}
       </tbody>
     </table>
 </div>
+    <h1>Students - Grid</h1>
+    <div class="row">
+    {% for dd in data %}
+
+            <div class="card col-md-4 mx-3 mt-5" style="width: 18rem;">
+              <img src="media/{{ dd.image }}" class="card-img-top" alt="{{ dd.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ dd.name }}</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">View more</a>
+                </div>
+        </div>
+    {% endfor %}
+    </div>
 {% endblock %}

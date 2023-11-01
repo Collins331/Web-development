@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8c2aa30-4cbe-4a52-b783-1c0496085506" name="Changes" comment="" />
+    <list default="true" id="f8c2aa30-4cbe-4a52-b783-1c0496085506" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +50,7 @@
     "WebServerToolWindowFactoryState": "false",
     "full.screen.before.presentation.mode": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/user/Desktop/Web Development Class/Django projects/school/class/static/images",
+    "last_opened_file_path": "C:/Users/user/Desktop/Web Development Class/Django projects/school",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -132,7 +134,8 @@
       <workItem from="1698173645942" duration="990000" />
       <workItem from="1698177404864" duration="262000" />
       <workItem from="1698320116419" duration="749000" />
-      <workItem from="1698388543968" duration="13657000" />
+      <workItem from="1698388543968" duration="15974000" />
+      <workItem from="1698659442587" duration="61000" />
     </task>
     <servers />
   </component>

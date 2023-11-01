@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+
+    <div class="container">
+        <h1 class="mt-5" >Edit Student</h1>
+        <form action="/edit/{{ ids.id }}" enctype="multipart/form-data" method="post" class="mt-5 px-5">
+
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" value="{{ ids.name }}" id="name" placeholder="Name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" value="{{ ids.email }}" placeholder="name@example.com" name="email" required>
+            </div>
+            <label for="age" class="form-label">Age</label>
+            <input type="number" id="age" class="form-control" value="{{ ids.age }}" aria-describedby="passwordHelpBlock" name="age" required>
+            <div class="mb-3">
+              <label for="image" class="form-label">Image</label>
+                <hr>
+                <img src="../media/{{ ids.image }}" width="200" height="200" alt="{{ ids.image }}">
+                <br><br>
+              <input class="form-control" type="file" id="image" name="image">
+                <hr>
+
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary mt-5" type="Submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
