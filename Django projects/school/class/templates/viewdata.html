@@ -2,8 +2,20 @@
 {% load static %}
 {% block body %}
 <div class="container">
+{% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{ message }}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
     <table class="table mt-5 tbl">
         <h1>Students - Tabular</h1>
+    {% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{ message }}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -29,33 +41,12 @@
             <td>
                 <a class="btn btn-danger" href="/delete/{{ dd.id }}">Delete</a>
             </td>
-{#                <!-- Button trigger modal -->#}
-{#                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">#}
-{#                  Delete#}
-{#                </button>#}
-{##}
-{#                <!-- Modal -->#}
-{#                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">#}
-{#                  <div class="modal-dialog">#}
-{#                    <div class="modal-content">#}
-{#                      <div class="modal-header">#}
-{#                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete {{ del.name }}</h1>#}
-{#                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>#}
-{#                      </div>#}
-{#                      <div class="modal-body">#}
-{#                        Are you sure you want to delete {{ del.name }}#}
-{#                      </div>#}
-{#                      <div class="modal-footer">#}
-{#                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>#}
-{#                      </div>#}
-{#                    </div>#}
-{#                  </div>#}
-{#                </div>#}
+
         </tr>
       {% endfor %}
       </tbody>
     </table>
-</div>
+
     <h1>Students - Grid</h1>
     <div class="row">
     {% for dd in data %}
@@ -70,4 +61,36 @@
         </div>
     {% endfor %}
     </div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center mt-5">
+
+
+
+{% if data.has_previous %}
+	<li class="page-item"><a class="page-link" href="?page=1">&laquo First</a></li>
+
+	<li class="page-item"><a class="page-link" href="?page={{ data.previous_page_number }}">Previous</a></li>
+
+{% endif %}
+
+
+<li class="page-item disabled"><a href="#" class="page-link">Page {{ data.number }} of {{ data.paginator.num_pages }}</a></li>
+
+
+{% for i in nums %}
+	<li class="page-item"><a class="page-link" href="?page={{ forloop.counter }}">{{ forloop.counter }}</a></li>
+
+{% endfor %}
+
+
+{% if data.has_next %}
+	<li class="page-item"><a class="page-link" href="?page={{ data.next_page_number }}">Next</a></li>
+
+	<li class="page-item"><a class="page-link" href="?page={{ data.paginator.num_pages }}">Last &raquo</a></li>
+
+{% endif %}
+
+ </ul>
+</nav>
+</div>
 {% endblock %}

@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
-from .models import Student
+from .models import Student, Slider
+from django.contrib import messages
+from django.core.paginator import  Paginator
 
 # Create your views here.
 def home(request):
@@ -11,7 +13,9 @@ def addstudent(request):
     return render(request, 'addstudent.html', {'navbar': 'add'})
 
 def viewdata(request):
-    student = Student.objects.all()
+    paginator = Paginator(Student.objects.all(), 3)
+    new_page = request.GET.get('page')
+    student = paginator.get_page(new_page)
     return render(request, 'viewdata.html', {'navbar': 'data', 'data': student})
 
 def about(request):
@@ -34,6 +38,7 @@ def insert(request):
 
         room = Student(name=name, email=email, age=age, image=image)
         room.save()
+        messages.success(request, 'Data added successfully')
         return redirect("/viewdata")
     return redirect("/viewdata")
 
@@ -56,5 +61,11 @@ def edit(request, id):
         student.age = age
 
         student.save()
+        messages.warning(request, 'Data edited successfully')
         return redirect("/viewdata")
     return render(request, 'edit.html', cont)
+
+
+def sliders(request):
+    slide = Slider.objects.all()
+    return render(request, 'slider.html', {'slider': slide, 'navbar': 'slide'})

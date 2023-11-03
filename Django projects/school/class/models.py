@@ -16,3 +16,11 @@ class Teacher(models.Model):
 
     def __str__(self):
         return self.name
+
+class Slider(models.Model):
+    text1 = models.CharField(max_length=100)
+    text2 = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='images', default='profile.png')
+
+    def __str__(self):
+        return self.text1
