@@ -14,12 +14,17 @@
     <title>School</title>
 </head>
 <body class="bg-dark">
+
 <div class="head">
     <a class="{% if navbar == 'home' %} tab {% endif %}" href="{% url 'class:home' %}">Home</a>
     <a class="{% if navbar == 'about' %} tab {% endif %}" href="{% url 'class:about' %}">About</a>
     <a class="{% if navbar == 'add' %} tab {% endif %}" href="{% url 'class:add-student' %}">Add Student</a>
     <a class="{% if navbar == 'data' %} tab {% endif %}" href="{% url 'class:view-data' %}">View data</a>
     <a class="{% if navbar == 'slide' %} tab {% endif %}" href="{% url 'class:slider' %}">Slider</a>
+      <form class="d-flex" method="get" role="search" action="{% url 'class:search' %}">
+        <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
 </div>
 {% block body %}
 

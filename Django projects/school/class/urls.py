@@ -11,4 +11,5 @@ urlpatterns = [
     path("insert", views.insert, name='insertdata'),
     path("edit/<id>", views.edit, name='edit'),
     path("sliders", views.sliders, name='slider'),
+    path("search/", views.search, name='search'),
 ]

@@ -32,8 +32,8 @@
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
       {% for txt in slider %}
-    <div class="carousel-item active" data-bs-interval="5000">
-      <img src="media/{{ txt.image }}" width="600" height="600" class="d-block w-100" alt="{{ txt.text1 }}">
+    <div class="carousel-item active" data-bs-interval="1000">
+      <img src="media/{{ txt.image }}"  height="100%" class="d-block w-100" alt="{{ txt.text1 }}">
         <div class="carousel-caption d-none d-md-block">
         <h3>{{ txt.text1 }}</h3>
         <p>{{ txt.text2 }}</p>
