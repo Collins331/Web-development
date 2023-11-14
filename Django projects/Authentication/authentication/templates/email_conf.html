@@ -1,0 +1,9 @@
+{% autoescape off %}
+Welcome to Linc Academy
+
+Hello {{name}} !!
+Please confirm your email by clicking on the following link.
+
+Confirmation link: http://{{domain}}{{% url 'activate' uid64=uid token=token %}}
+
+{% endautoescape %}
